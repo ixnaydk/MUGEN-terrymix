@@ -1,0 +1,1606 @@
+;-------------------------|
+; Arquivo CNS - Terry Mix |
+; criado por Ixnaydk      |
+;-------------------------|
+; Vars Usadas             |
+; var(0)                  |
+; var(1)                  |
+;-------------------------|
+
+[Data]
+life = 1000
+attack = 100
+defence = 100
+fall.defence_up = 50
+liedown.time = 60
+airjuggle = 15
+sparkno = 2
+guard.sparkno = 40
+KO.echo = 0
+volume = 0
+IntPersistIndex = 60
+FloatPersistIndex = 40
+
+[Size]
+xscale = 1           
+yscale = 1           
+ground.back = 15     
+ground.front = 16    
+air.back = 12        
+air.front = 12       
+height = 60      
+attack.dist = 160    
+proj.attack.dist = 90 
+proj.doscale = 0     
+head.pos = -5, -90   
+mid.pos = -5, -60    
+shadowoffset = 0    
+draw.offset = 0,0    
+
+[Velocity]
+walk.fwd  = 1.9      
+walk.back = -1.3     
+run.fwd  = 5.7, 0    
+run.back = -5.3,-3.5 
+jump.neu = 0,-9.3    
+jump.back = -3.2    
+jump.fwd = 3.4       
+runjump.back = -3.6,-8.9 
+runjump.fwd = 4.7,-8.8      
+airjump.neu = 0,-8.4      
+airjump.back = -2.55      
+airjump.fwd = 2.5         
+
+[Movement]
+airjump.num = 1      
+airjump.height = 25  
+yaccel = .45         
+stand.friction = .83  
+crouch.friction = .82 
+
+;---------------
+[StateDef 200]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 200 
+poweradd = 50
+
+[State 200, HitDef]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 200, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[StateDef 201]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 201
+poweradd = 50
+
+[State 201, HitDef]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 201, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[StateDef 210]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 210 
+poweradd = 50
+
+[State 210, HitDef]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 210, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[StateDef 211]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 211 
+poweradd = 50
+
+[State 211, HitDef]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 211, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[StateDef 215]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 215 
+poweradd = 50
+
+[State 215, HitDef]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 215, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[StateDef 400]
+type = C
+movetype = A
+physics = C
+ctrl = 0
+velset = 0,0
+anim = 400 
+poweradd = 50
+
+[State 400, HitDef]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 400, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 11
+
+;---------------
+[StateDef 410]
+type = C
+movetype = A
+physics = C
+ctrl = 0
+velset = 0,0
+anim = 410 
+poweradd = 50
+
+[State 410, HitDef]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 410, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 11
+
+;---------------
+[StateDef 600]
+type = A
+movetype = A
+physics = A
+ctrl = 0
+anim = 600 
+poweradd = 50
+
+[State 600, HitDef]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+;---------------
+[StateDef 605]
+type = A
+movetype = A
+physics = A
+ctrl = 0
+anim = 605 
+poweradd = 50
+
+[State 605, HitDef]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+;---------------
+[StateDef 610]
+type = A
+movetype = A
+physics = A
+ctrl = 0
+anim = 610 
+poweradd = 50
+
+[State 610, HitDef]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+;---------------
+[StateDef 615]
+type = A
+movetype = A
+physics = A
+ctrl = 0
+anim = 615 
+poweradd = 50
+
+[State 615, HitDef]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+;--------------
+;Burning Knuckle
+[StateDef 1000]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 1000
+poweradd = 100
+
+[State 1000, VelSet]
+type = VelSet
+trigger1 = AnimElem = 4
+x = 10
+
+[State 1000, VelSet]
+type = VelSet
+trigger1 = AnimElem = 6
+x = 5
+
+[State 1000, VelSet]
+type = VelSet
+trigger1 = AnimElem = 8
+x = 5
+
+[State 1000, VelAdd]
+type = VelAdd
+trigger1 = AnimElem = 4
+trigger2 = AnimElem = 6
+trigger3 = AnimElem = 8
+x = 3
+
+[State 1000, Explod]
+type = Explod
+trigger1 = AnimElem = 4
+ID = 999
+pos = 58,-75
+anim = 1001
+sprpriority = 4
+bindtime = -1
+removeongethit = 1
+removetime = 40
+
+[State 1000, HitDef]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = S,SA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 1000, ChangeState]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;--------------
+;Power Wave
+[StateDef 1010]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 1010 
+
+[State 3000, Fire Wave]
+type = Helper
+trigger1 = AnimElemTime(4) = 3
+helpertype = Normal
+ID = 1009
+name = "Power Wave"
+postype = p1
+pos = 17,0
+stateno = 1011
+ownpal = 1
+keyctrl = 0
+
+[State 3000, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[Statedef 1011]
+type = S
+movetype = A
+poweradd = 0
+physics = N
+juggle = 0
+ctrl = 0
+anim = 1011
+sprpriority = 5
+
+[State 1011, VelSet]
+type = VelSet
+trigger1 = 1
+x = 3
+
+[State 1011, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1011, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S,SP
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 1011, CS]
+type = ChangeState
+trigger1 = MoveContact
+ctrl = 1
+value = 1012
+
+;--------------
+;Power Wave Acabando
+[Statedef 1012]
+type    = S
+movetype= A
+physics = N
+juggle  = 1
+poweradd = 0
+anim = 1012
+ctrl = 0
+sprpriority = 2
+
+[State 1012, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1012, PosFreeze]
+type = PosFreeze
+trigger1 = 1
+time = -1
+
+[State 1012, DestroySelf]
+type = DestroySelf
+trigger1 = AnimTime = 0
+
+;--------------
+;Power Wave Forte
+[StateDef 1015]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 1015
+
+[State 1015, Fire Wave]
+type = Helper
+trigger1 = AnimElemTime(4) = 3
+helpertype = Normal
+ID = 1014
+name = "Power Wave Forte"
+postype = p1
+pos = 17,0
+stateno = 1016
+ownpal = 1
+keyctrl = 0
+
+[State 1015, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[Statedef 1016]
+type = S
+movetype = A
+poweradd = 0
+physics = N
+juggle = 0
+ctrl = 0
+anim = 1016
+sprpriority = 5
+
+[State 1016, VelSet]
+type = VelSet
+trigger1 = 1
+x = 5
+
+[State 1016, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1016, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S,SP
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 1016, CS]
+type = ChangeState
+trigger1 = MoveContact
+ctrl = 1
+value = 1017
+
+;--------------
+;Power Wave Acabando
+[Statedef 1017]
+type    = S
+movetype= A
+physics = N
+juggle  = 1
+poweradd = 0
+anim = 1017
+ctrl = 0
+sprpriority = 2
+
+[State 1017, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1017, PosFreeze]
+type = PosFreeze
+trigger1 = 1
+time = -1
+
+[State 1017, DestroySelf]
+type = DestroySelf
+trigger1 = AnimTime = 0
+
+;---------------
+;Crack Shot
+[StateDef 1020]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 1020 
+poweradd = 100
+
+[State 1020, HitDef]
+type = HitDef
+trigger1 = AnimElem = 5 || AnimElem = 6
+attr = S,NA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+numhit = 1
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = 2,0
+air.animtype = Back
+air.juggle = 5
+
+[State 1020, 1]
+type = StateTypeSet
+trigger1 = AnimElem = 2
+StateType = A
+physics = A
+
+[State 1020, 2]
+type = VelSet
+trigger1 = AnimElem = 2
+x = 4
+y = -6
+
+[State 1020, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 52
+
+;--------------
+;Kof Power Wave
+[StateDef 1050]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 1010 
+
+[State 1050, Fire Wave]
+type = Helper
+trigger1 = AnimElemTime(4) = 3
+helpertype = Normal
+ID = 1049
+name = "Kof Power Wave"
+postype = p1
+pos = 17,0
+stateno = 1051
+ownpal = 1
+keyctrl = 0
+
+[State 1050, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[Statedef 1051]
+type = S
+movetype = A
+poweradd = 0
+physics = N
+juggle = 0
+ctrl = 0
+anim = 1051
+sprpriority = 5
+
+[State 1051, VelSet]
+type = VelSet
+trigger1 = 1
+x = 3
+
+[State 1051, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1051, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S,SP
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 1051, CS]
+type = ChangeState
+trigger1 = MoveContact
+ctrl = 1
+value = 1052
+
+;--------------
+;Kof Power Wave Acabando
+[Statedef 1052]
+type    = S
+movetype= A
+physics = N
+juggle  = 1
+poweradd = 0
+anim = 1052
+ctrl = 0
+sprpriority = 2
+
+[State 1052, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1052, PosFreeze]
+type = PosFreeze
+trigger1 = 1
+time = -1
+
+[State 1052, DestroySelf]
+type = DestroySelf
+trigger1 = AnimTime = 0
+
+;--------------
+;Kof Power Wave Forte
+[StateDef 1060]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 1010 
+
+[State 1060, Fire Wave]
+type = Helper
+trigger1 = AnimElemTime(4) = 3
+helpertype = Normal
+ID = 1049
+name = "Kof Power Wave Forte"
+postype = p1
+pos = 17,0
+stateno = 1061
+ownpal = 1
+keyctrl = 0
+
+[State 1060, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[Statedef 1061]
+type = S
+movetype = A
+poweradd = 0
+physics = N
+juggle = 0
+ctrl = 0
+anim = 1061
+sprpriority = 5
+
+[State 1051, VelSet]
+type = VelSet
+trigger1 = 1
+x = 5
+
+[State 1061, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1061, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S,SP
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 1061, CS]
+type = ChangeState
+trigger1 = MoveContact
+ctrl = 1
+value = 1062
+
+;--------------
+;Kof Power Wave Acabando
+[Statedef 1062]
+type    = S
+movetype= A
+physics = N
+juggle  = 1
+poweradd = 0
+anim = 1062
+ctrl = 0
+sprpriority = 2
+
+[State 1062, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1062, PosFreeze]
+type = PosFreeze
+trigger1 = 1
+time = -1
+
+[State 1062, DestroySelf]
+type = DestroySelf
+trigger1 = AnimTime = 0
+
+;--------------|
+;Round Wave    |
+;--------------|
+[StateDef 1070]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 1070
+poweradd = 100
+
+[State 1070, Round Wave]
+type = Helper
+trigger1 = AnimElem = 4
+helpertype = Normal
+ID = 1069
+name = "Round Wave"
+postype = p1
+pos = 40,0
+stateno = 1071
+ownpal = 1
+removetime = 45
+keyctrl = 0
+
+[State 1070, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 1070, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[Statedef 1071]
+type = S
+movetype = A
+poweradd = 0
+physics = N
+juggle = 0
+ctrl = 0
+anim = 1071
+sprpriority = 5
+
+[State 1071, HitDef]
+type = HitDef
+trigger1 = AnimElem = 7
+attr = S,SP
+animtype = Heavy
+damage  = 20*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 1071, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 1072
+
+;--------------
+;Round Wave Acabando
+[Statedef 1072]
+type    = S
+movetype= A
+physics = N
+juggle  = 1
+poweradd = 0
+anim = 1072
+ctrl = 0
+sprpriority = 2
+
+[State 1072, DestroySelf]
+type = DestroySelf
+trigger1 = AnimTime = 0
+
+;--------------|
+;Power Geyser  |
+;--------------|
+[StateDef 3000]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 3000 
+poweradd = -1000
+
+[State 3000, BGPalFX]
+type = BGPalFx
+trigger1 = AnimElem = 3
+add = 230/time,50/time,70/time
+time = 90
+
+[State 3000, PalFX]
+type = PalFx
+trigger1 = AnimElem = 3
+add = 230/time,50/time,70/time
+time = 90
+
+[State 3000, Power Geyser]
+type = Helper
+trigger1 = AnimElem = 4
+helpertype = Normal
+ID = 3299
+name = "Power Geyser"
+postype = p1
+pos = 40,0
+stateno = 3001
+ownpal = 1
+removetime = 85
+keyctrl = 0
+
+[State 3000, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 3000, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[Statedef 3001]
+type = S
+movetype = A
+poweradd = 0
+physics = N
+juggle = 0
+ctrl = 0
+anim = 3001
+sprpriority = 5
+
+[State 3001, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 3001, HitDef]
+type = HitDef
+trigger1 = Time = 6
+trigger2 = Time = 12
+trigger3 = Time = 18
+trigger4 = Time = 24
+trigger5 = Time = 30
+attr = S,SP
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 3001, HitDef]
+type = HitDef
+trigger1 = Time = 5
+trigger2 = Time = 10
+trigger3 = Time = 15
+trigger4 = Time = 20
+trigger5 = Time = 25
+attr = S,SP
+animtype = Heavy
+damage  = 8*2
+getpower = 10*2
+givepower = 8*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 3000, CS]
+type = ChangeState
+trigger1 = AnimElem = 7
+ctrl = 1
+value = 3002
+
+;--------------
+;Power Geyser Acabando
+[Statedef 3002]
+type    = S
+movetype= A
+physics = N
+juggle  = 1
+poweradd = 0
+anim = 3002
+ctrl = 0
+sprpriority = 2
+
+[State 3002, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 3002, DestroySelf]
+type = DestroySelf
+trigger1 = AnimTime = 0
+
+;------------------|
+;KoF Power Geyser  |
+;------------------|
+[StateDef 3010]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 3000 
+poweradd = -1000
+
+[State 3010, Power Geyser]
+type = Helper
+trigger1 = AnimElem = 4
+helpertype = Normal
+ID = 3009
+name = "Kof Power Geyser"
+postype = p1
+pos = 40,0
+stateno = 3011
+ownpal = 1
+removetime = 95
+keyctrl = 0
+
+[State 3010, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 3010, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[Statedef 3011]
+type = S
+movetype = A
+poweradd = 0
+physics = N
+juggle = 0
+ctrl = 0
+anim = 3011
+sprpriority = 5
+
+[State 3011, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 3011, HitDef]
+type = HitDef
+trigger1 = Time = 6
+trigger2 = Time = 12
+trigger3 = Time = 18
+trigger4 = Time = 24
+trigger5 = Time = 30
+attr = S,SP
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 3011, HitDef]
+type = HitDef
+trigger1 = Time = 5
+trigger2 = Time = 10
+trigger3 = Time = 15
+trigger4 = Time = 20
+trigger5 = Time = 25
+attr = S,SP
+animtype = Heavy
+damage  = 8*2
+getpower = 10*2
+givepower = 8*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 3011, CS]
+type = ChangeState
+trigger1 = AnimElem = 9
+ctrl = 0
+value = 3012
+
+;--------------
+;Power Geyser Acabando
+[Statedef 3012]
+type    = S
+movetype= A
+physics = N
+juggle  = 1
+poweradd = 0
+anim = 3012
+ctrl = 0
+sprpriority = 2
+
+[State 3012, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 3012, DestroySelf]
+type = DestroySelf
+trigger1 = AnimTime = 0
+
+;-------------------|
+;KoF Triple Geyser  |
+;-------------------|
+[StateDef 3020]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 3020 
+poweradd = -3000
+
+[State 3020, Power Geyser]
+type = Helper
+trigger1 = AnimElem = 4
+helpertype = Normal
+ID = 3019
+name = "Kof Triple Geyser"
+postype = p1
+pos = 40,0
+stateno = 3011
+ownpal = 1
+removetime = 95
+keyctrl = 0
+
+[State 3020, Power Geyser]
+type = Helper
+trigger1 = AnimElemTime(4) = 30
+helpertype = Normal
+ID = 3020
+name = "Kof Triple Geyser 2"
+postype = p1
+pos = 60,0
+stateno = 3011
+ownpal = 1
+removetime = 95
+keyctrl = 0
+
+[State 3020, Power Geyser]
+type = Helper
+trigger1 = AnimElemTime(5) = 30
+helpertype = Normal
+ID = 3021
+name = "Kof Triple Geyser 3"
+postype = p1
+pos = 90,0
+stateno = 3011
+ownpal = 1
+removetime = 95
+keyctrl = 0
+
+[State 3020, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 3020, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;--------------|
+;Buster Wolf   |
+;--------------|
+[StateDef 3050]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 3050 
+poweradd = -2000
+
+[State 3050, VelSet]
+type = VelSet
+trigger1 = AnimElem = 2
+x = 10
+
+[State 3050, VelAdd]
+type = VelAdd
+trigger1 = AnimElem = 2
+trigger2 = AnimElemTime(2) = 5
+trigger3 = AnimElemTime(2) = 10
+trigger4 = AnimElemTime(2) = 15
+x = 6
+
+[State 3050, Explod]
+type = Explod
+trigger1 = AnimElem = 2
+ID = 3049
+pos = 58,-75
+anim = 3054
+sprpriority = 4
+bindtime = -1
+removeongethit = 1
+removetime = 40
+
+[State 3050, HitDef]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = S,SA
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 3050, ChangeState]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[State 3050, ChangeState]
+type = ChangeState
+trigger1 = MoveContact = 1
+value = 3051
+ctrl = 0
+
+;--------------|
+;Buster Wolf   |
+;--------------|
+[StateDef 3051]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+velset = 0,0
+anim = 3051 
+sprpriority = 4
+
+[State 3300, Buster Wolf]
+type = Helper
+trigger1 = AnimElem = 2
+helpertype = Normal
+ID = 3050
+name = "buster_wolf"
+postype = p1
+pos = 10,0
+stateno = 3052
+ownpal = 1
+removetime = 43
+keyctrl = 0
+
+[State 3051, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 3051, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 0
+
+;---------------
+[Statedef 3052]
+type = S
+movetype = A
+poweradd = 0
+physics = N
+juggle = 0
+ctrl = 0
+anim = 3052
+sprpriority = 3
+
+[State 3052, HitDef]
+type = HitDef
+trigger1 = Time = 15
+trigger2 = Time = 20
+trigger3 = Time = 25
+trigger4 = Time = 30
+trigger5 = Time = 35
+numhit = 5
+attr = S,SP
+animtype = Heavy
+damage  = 10*2
+getpower = 15*2
+givepower = 10*2
+guardflag = MA
+sparkno = S1003
+sparkxy = 7,-10
+pausetime = 2,2
+guard.sparkno = -1
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = -1,-1
+air.velocity = -5,-3
+air.animtype = Back
+air.juggle = 5
+air.fall = 1
+
+[State 3052, CS]
+type = ChangeState
+trigger1 = AnimTime = 0
+ctrl = 1
+value = 3053
+
+;--------------
+;Buster Wolf Acabando
+[Statedef 3053]
+type    = S
+movetype= A
+physics = N
+juggle  = 1
+poweradd = 0
+anim = 3053
+ctrl = 0
+sprpriority = 3
+
+[State 3053, DestroySelf]
+type = DestroySelf
+trigger1 = AnimTime = 0
+
+
+;---------------------------------------------------------------------------
+; Override common states (use same number to override) :
+;---------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------
+; States that are always executed (use statedef -2)
+;---------------------------------------------------------------------------
+[Statedef -2]
+
+[State -2, Vars Ativas]
+type = DisplaytoClipboard
+trigger1 = 1
+ignorehitpause = 1
+text = "Var(0) = %d Var(1) = %d"
+params = var(0), var(1)
+
+;---------------------------------------------------------------------------
+; States that are executed when in self's state file (use statedef -3)
+;---------------------------------------------------------------------------
+
+[Statedef -3]
+
+[State -3, Landing Sound]
+type = PlaySnd
+triggerall = Time = 1
+trigger1 = stateno = 52 
+trigger2 = stateno = 106 
+value = 40, 0

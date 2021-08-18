@@ -1,0 +1,28 @@
+;-------------------------|
+; Arquivo DEF - Terry Mix |
+; criado por Ixnaydk      |
+;-------------------------|
+
+
+[Info]
+name = "Ixnaydk Terry Mix"
+displayname = "Terry"
+versiondate = 12,06,2003
+mugenversion = 04,14,2001
+author = "Ixnaydk"
+pal.defaults = 6,3,4,2,5,1
+
+[Files]
+cmd = terry.cmd
+cns = terry.cns
+st = terry.cns
+stcommon = common1.cns
+sprite = terry.sff
+anim = terry.air
+;sound = terry.snd
+pal1 = terry.act  
+pal2 = terry2.act
+pal3 = terry3.act
+pal4 = terry4.act
+pal5 = terry5.act
+pal6 = terry6.act
